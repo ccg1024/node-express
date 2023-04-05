@@ -1,6 +1,6 @@
 // global config
 module.exports = {
   jwtSecretKey: 'my secret',
-  tokenTime: '30s',
+  tokenTime: '1h',
   algorithms: 'HS256'
 }
