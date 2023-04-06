@@ -2,6 +2,7 @@
 const cors = require('cors')
 const express = require('express')
 const bodyParser = require('body-parser')
+const fileUpload = require('express-fileupload')
 const { expressjwt: expressJWT } = require('express-jwt')
 
 // user module
@@ -11,6 +12,11 @@ const homeRouter = require('./router/default')
 
 const app = express()
 const port = 5000
+
+app.use(fileUpload())
+
+app.use(express.static('public'))
+
 // enable CORS
 app.use(cors())
 
